@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
 import { LoginService } from './login.service';
-
-class Login {
-  constructor( public name: string, public password: string){ }
-}
+import { Login } from './login';
 
 @Component({
   selector: 'login-page',
@@ -16,7 +13,19 @@ export class LoginComponent {
   submitted = false;
   onSubmit() {
     this.submitted = true;
-    this.model = new Login('', '');
+    this.loginService.login(this.model).then(function(response) {
+
+      if(response.success) {
+        this.model = new Login('', '');
+      } 
+      else {
+
+      }
+
+    })
+    .catch(function(error) {
+
+    });
   }
   get diagnostic() { return JSON.stringify(this.model); }
 }
