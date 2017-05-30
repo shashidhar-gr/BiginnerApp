@@ -26,4 +26,9 @@ export class ExpenseComponent implements OnInit{
     this.categories = this.categoryService.getCategories();
   }
 
+  //
+  onCategorySelect(Category): void {
+    console.log(Category);
+  }
+
 }

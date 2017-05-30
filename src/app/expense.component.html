@@ -1,6 +1,6 @@
 <div>
   <ul>
-    <li *ngFor = "let category of categories">
+    <li *ngFor = "let category of categories" (click) = "onCategorySelect(category)">
       <span>{{category.name}}</span>
     </li>
   </ul>

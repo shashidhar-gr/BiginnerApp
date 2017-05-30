@@ -1,8 +1,14 @@
 nav a {
   cursor: pointer;
-  background-color: lightblue;
-  color: white;
-  height: 100px;
-  text-align: center;
-  font-size: 80px
+  font-size: 50px;
+}
+nav a:visited, a:link {
+  color: #607D8B;
+}
+nav a:hover {
+  color: #039be5;
+  background-color: #CFD8DC;
+}
+nav a.active {
+  color: #039be5;
 }
