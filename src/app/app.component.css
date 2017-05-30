@@ -1,0 +1,8 @@
+nav a {
+  cursor: pointer;
+  background-color: lightblue;
+  color: white;
+  height: 100px;
+  text-align: center;
+  font-size: 80px
+}
