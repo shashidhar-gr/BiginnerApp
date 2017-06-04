@@ -25,7 +25,9 @@ export class ExpenseListService {
     
     return this.http.post(this.expenseListUrl, expenseList, {headers: this.headers})
     .toPromise()
-    .then(res => res.json().data as any)
+    .then(res => 
+      res.json().data as any
+    )
     .catch(this.handleError)
   }
 

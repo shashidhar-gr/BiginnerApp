@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { Router } from '@angular/router';
 import { ExpenseListService } from './expenselist.service' 
 
 @Component({
@@ -8,7 +9,7 @@ import { ExpenseListService } from './expenselist.service'
     providers: [ExpenseListService]
 })
 export class AddExpenseComponent {
-    constructor(private expenseListService: ExpenseListService) { }
+    constructor(private expenseListService: ExpenseListService, private router: Router) { }
 
     NewExpense: object = {
         "category_name": "",
@@ -19,6 +20,7 @@ export class AddExpenseComponent {
 
     onSubmit(NewExpense): void {
         this.expenseListService.addExpense(NewExpense).then(response => {
+            this.router.navigate(['/home']);
         });
     }
 }
