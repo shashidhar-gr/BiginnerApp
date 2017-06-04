@@ -1,7 +1,47 @@
 <div class = "row">
-  <nav>
+
+  <!--<nav>
     <a routerLink = "/expense">Expense</a>
     <a routerLink = "/income">Income</a>
-  </nav>
-  <router-outlet></router-outlet>
+  </nav>-->
+
+      <header>Money Tracker</header>
+      <!--Row that contains Date Selector-->
+      <div class = "row">
+        <div class = "col-md-12">
+          <!--Date Selector will come here-->
+          DATE SLECTOR
+        </div>
+      </div>
+      <!--Row that contains Navigation, Form, Form details-->
+      <div class = "row">
+        <div class = "col-md-3">
+          <!--Navigation section will come here-->
+          <div>
+            <nav class="navbar navbar-default">
+              <div class="container-fluid">
+                <ul class = "nav nav-pills nav-stacked">
+                  <li class="active"><a routerLink = "/home">Expense</a></li>
+                  <li><a routerLink = "/home">Income</a></li>
+                  <li><a routerLink = "/home">Budget</a></li>
+                  <li><a routerLink = "/home">Categories</a></li>
+                  <li><a routerLink = "/home">Report</a></li>
+                </ul>
+              </div>
+            </nav>
+            
+          </div>
+
+        </div>
+        <div class = "col-md-6">
+          <!--Expense list will come here-->
+            <router-outlet></router-outlet>
+        </div>
+        <div class = "col-md-3">
+          <!--Form details come here-->
+          FORM DETAILS SECTION
+        </div>
+      </div>
+      <!--Row that contains copyrights details-->
+      <footer>Copyright © 2017 by Shashidhar.G.R</footer>
 </div>

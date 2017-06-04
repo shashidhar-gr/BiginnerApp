@@ -4,34 +4,41 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+// Imports for loading & configuring the in-memory web api
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService }  from './in-memory-data.service';
+
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login.component';
-import { ExpenseComponent } from './expense.component'
-import { IncomeComponent } from './income.component'
+import { ExpenseListComponent } from './expenselist.component';
+import { AddExpenseComponent } from './addexpense.component';
+import { IncomeComponent } from './income.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    ExpenseComponent,
+    ExpenseListComponent,
+    AddExpenseComponent,
     IncomeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    InMemoryWebApiModule.forRoot(InMemoryDataService),
     RouterModule.forRoot([
       {
-        path: 'expense',
-        component: ExpenseComponent
+        path: 'home',
+        component: ExpenseListComponent
       },
       {
-        path: 'income',
-        component: IncomeComponent
+        path: 'addexpense',
+        component: AddExpenseComponent
       },
       {
         path: '',
-        redirectTo: '/expense',
+        redirectTo: '/home',
         pathMatch: 'full'
       }
     ])

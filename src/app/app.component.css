@@ -1,4 +1,4 @@
-nav a {
+/**nav a {
   cursor: pointer;
   font-size: 50px;
 }
@@ -11,4 +11,4 @@ nav a:hover {
 }
 nav a.active {
   color: #039be5;
-}
+}**/

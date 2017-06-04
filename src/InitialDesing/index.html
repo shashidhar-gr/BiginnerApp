@@ -7,7 +7,7 @@
   </head>
   <body>
     <div class="container">
-      <header>HEADER</header>
+      <header>Money Tracker</header>
       <!--Row that contains Date Selector-->
       <div class = "row">
         <div class = "col-md-12">
@@ -22,7 +22,7 @@
           <div>
             <nav class="navbar navbar-default">
               <div class="container-fluid">
-                <ul class = "nav navbar-nav navbar-right">
+                <ul class = "nav nav-pills nav-stacked">
                   <li class="active"><a href="#">Home</a></li>
                   <li><a href="#">Budget</a></li>
                   <li><a href="#">Categories</a></li>
@@ -34,39 +34,15 @@
 
         </div>
         <div class = "col-md-6">
-          <!--Form will come here-->
-          <form>
-
-            <div class = "form-group">
-
-              <label for = "category">Category</label>
-              <select class="form-control" id = "category" placeholder="Category">
-                <option value="category1">category1</option>
-                <option value="category2">category2</option>
-                <option value="category3">category3</option>
-                <option value="category4">category4</option>
-                <option value="category5">category5</option>
-              </select>
-
-            </div>
-
-            <div class = "form-group">
-
-              <label for = "subcategory">Sub Category</label>
-              <select class="form-control" id = "subcategory" placeholder="Sub Category">
-                <option value="subcategory1">subcategory1</option>
-                <option value="subcategory2">subcategory2</option>
-                <option value="subcategory3">subcategory3</option>
-                <option value="subcategory4">subcategory4</option>
-                <option value="subcategory5">subcategory5</option>
-              </select>
-
-            </div>
-
-            <button type="submit" class="btn btn-default">Add</button>
-
-          </form>
-
+          <!--Expense list will come here-->
+            <ul>
+              <li>Category01 - Subcategory01   100</li>
+              <li>Category01 - Subcategory02    50</li>
+              <li>Category02 - Subcategory02   200</li>
+              <li>Category01 - Subcategory03    10</li>
+              <li>Category02 - Subcategory01    05</li>
+            </ul>
+            <a class="btn btn-default" href="#" role="button">New Entry</a>
         </div>
         <div class = "col-md-3">
           <!--Form details come here-->
@@ -74,7 +50,7 @@
         </div>
       </div>
       <!--Row that contains copyrights details-->
-      <footer>COPYRIGHTS</footer>
+      <footer>Copyright © 2017 by Shashidhar.G.R</footer>
     </div>
   </body
 </html>

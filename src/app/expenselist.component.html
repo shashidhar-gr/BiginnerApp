@@ -1,0 +1,8 @@
+<div>
+    <ul>
+        <li *ngFor = "let expense of expenseList">
+            <span>{{ expense.category_name }}-{{ expense.subcategory_name }} {{ expense.amount }}</span>
+        </li>
+    </ul>
+    <a class="btn btn-default" href="/addexpense" role="button">New Entry</a>
+</div>
